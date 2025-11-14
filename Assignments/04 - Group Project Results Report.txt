@@ -1,0 +1,3 @@
+Discuss the problem, scope, and approach taken to create your LLM Chatbot. Share the challenges and learnings you encountered during the creation of the project. Include elements from the proposal and design document when appropriate.
+
+See the attached document for further details.

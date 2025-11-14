@@ -1,0 +1,3 @@
+Create and share a PowerPoint presentation that provides a brief overview of the problem your Chatbot addresses, the design, and challenges encountered. Demo the Chatbot to the class.
+
+See the attached document for further details.
