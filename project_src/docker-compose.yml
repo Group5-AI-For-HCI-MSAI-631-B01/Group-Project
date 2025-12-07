@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    container_name: hci-chatbot
+    ports:
+      - "7860:7860"
+    env_file:
+      - .env
+    volumes:
+      # Map local Hugging Face cache to container to avoid re-downloading models
+      # Uses ${HOME} to find the user's home directory
+      - ${HOME}/.cache/huggingface:/data/huggingface
+      # Persist logs locally
+      - ./logs:/app/logs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
